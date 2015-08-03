@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Rubik:400,500italic);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 h1 {
 	color: #fff;
@@ -8,10 +9,11 @@ h1 {
 }
 
 h2 {
-	color: #F2BA03;
-	font-size: 25px;
-	text-align: center;
-	font-family: 'Rubik', sans-serif;
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	text-align: right;
+	padding-right: 150px;	
 }
 
 body {
@@ -30,5 +32,5 @@ body {
 }
 
 .links a:hover {
-	color:white;    
+	color: #71b1bb;    
 }
