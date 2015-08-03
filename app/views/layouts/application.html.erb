@@ -3,10 +3,40 @@
 <head>
   <title>Hello App</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-tsurbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-10 links">
+    	<!-- Button trigger modal -->
+  <%= link_to '+Add', "#", :data => {:toggle => 'modal', :target => '#myModal'} %>
+    </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">My Hello</h4>
+      </div>
+      <div class="modal-body">
+      <%= simple_form_for Greeting.new do |f| %>
+  <%= f.input :usergreeting, :label => "I say hello like this:", :placeholder => "What's up!" %>
+  <%= f.input :initials, :label => "Initials", :placeholder => "J.D." %>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit '+Add', :class => 'btn btn-primary' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 

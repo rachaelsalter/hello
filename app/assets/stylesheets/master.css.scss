@@ -7,10 +7,28 @@ h1 {
 	font-family: 'Rubik', sans-serif;
 }
 
+h2 {
+	color: #F2BA03;
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Rubik', sans-serif;
+}
+
 body {
 	background-image: url('/assets/hello.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;	
+}
+
+.links a {
+	color: #F2BA03;
+	font-size: 25px;
+	font-family: 'Rubik', sans-serif;
+	text-decoration: none;
+}
+
+.links a:hover {
+	color:white;    
 }
